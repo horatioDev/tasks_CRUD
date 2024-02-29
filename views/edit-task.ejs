@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<title>Tasks Manager</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h1>Tasks Manager: Node.js CRUD API with Express and MongoDB</h1>
+
+		<!-- Tasks Form -->
+		<h2>Add New Task</h2>
+		<form id="editTaskForm" action="/tasks/<%= task._id %>" method="PUT">
+			<label for="dueDate">Due Date:</label><br>
+			<input type="date" id="dueDate" name="dueDate" value="<%= task.dueDate %>"><br>
+		
+			<label for="taskName">Task Name:</label><br>
+			<input type="text" id="taskName" name="taskName" value="<%= task.taskName %>" required><br>
+		
+			<label for="description">Description:</label><br>
+			<textarea id="description" name="description" rows="4" cols="50"><%= task.description %></textarea><br>
+		
+			<!-- Add more fields as needed -->
+		
+			<button data-id="<%= task._id %>" id="save-btn" class="btn btn-succes" type="submit">Save Changes</button>
+			<button data-id="<%= task._id %>" id="cancel-btn" class="btn btn-succes" type="submit">Cancel</button>
+		</form>
+
+		<script src="/main.js"></script>
+	</body>
+</html>

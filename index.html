@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<title>Tasks Manager</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h1>Tasks Manager: Node.js CRUD API with Express and MongoDB</h1>
+
+		<!-- Tasks Form -->
+		<h2>Add New Task</h2>
+		<form action="/tasks" method="POST">
+			<label for="dueDate">Due Date:</label><br>
+			<input type="date" id="dueDate" name="dueDate"><br>
+		
+			<label for="taskName">Task Name:</label><br>
+			<input type="text" id="taskName" name="taskName" required><br>
+		
+			<label for="description">Description:</label><br>
+			<textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+		
+			<!-- Add more fields as needed -->
+		
+			<button type="submit">Add Task</button>
+		</form>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
